@@ -9,14 +9,26 @@
 import UIKit
 
 class CreationViewController: UIViewController {
-
+    var flashcardController: ViewController!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
         // Do any additional setup after loading the view.
     }
     
-
+    @IBOutlet weak var questionTextField: UITextField!
+  
+    @IBOutlet weak var answerTextField: UITextField!
+    
+    @IBAction func DidTapOnDone(_ sender: Any) {
+        let questionText =  questionTextField.text;
+        let answerText = answerTextField.text;
+        flashcardController.updateFlashCard(question: questionText!, answer: answerText!);
+        
+        dismiss(animated: true)
+    }
+    
+    
     @IBAction func DidTapOnCancel(_ sender: Any) {
         dismiss(animated: true)
     }

@@ -84,7 +84,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Question" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4fZ-Fz-w3S">
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Question" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4fZ-Fz-w3S" userLabel="questionTextField">
                                 <rect key="frame" x="68" y="276" width="238" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
@@ -108,7 +108,16 @@
                                 <action selector="DidTapOnCancel:" destination="YzS-oa-aK9" id="PGT-PF-VAR"/>
                             </connections>
                         </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Done" id="Hyg-Xj-NpL">
+                            <connections>
+                                <action selector="DidTapOnDone:" destination="YzS-oa-aK9" id="ZYC-K3-Jmr"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="answerTextField" destination="Xxc-uo-S45" id="KyN-ce-4cD"/>
+                        <outlet property="questionTextField" destination="4fZ-Fz-w3S" id="oAT-7y-cCg"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4S2-yg-jJb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
